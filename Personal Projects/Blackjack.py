@@ -10,15 +10,15 @@ BACKSIDE = 'backside'
 
 def main():
 
-    print('''
+    print(f'''
 Hello, dear friend. Want to play a little game? It's called "BrackJack", and
 to spice things up, we are going to play with a "small" bet.
 
 This are the rules:
 
  1. Try to get as close to 21 without going over;
- 2. Kings [K], Queens [Q], and Jacks [J] are worth 10 points;
- 3. Aces [{}] are worth 1 or 11 points;
+ 2. Kings (K), Queens (Q), and Jacks (J) are worth 10 points;
+ 3. Aces ({chr(9824)}) are worth 1 or 11 points;
  4. Cards 2 through 10 are worth their face value;
  5. In case of a tie, the bet is returned to the player;
  6. The dealer stops hitting at 17.
@@ -35,7 +35,7 @@ Double Down is only possible on the fist move!
 
 Be cauful when tanking this risk!
 
-'''.format(chr(9824)))
+''')
 
     money = 5000
     while True:

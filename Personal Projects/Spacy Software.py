@@ -6,10 +6,10 @@ maxGuesses = 10
 
 def main():
     print(
-'''I'm trying to remember a number, but I not sure what it's...
+f'''I'm trying to remember a number, but I not sure what it's...
 Can you help me? I have some clues to help you:
 
- 1. I'm looking for a ditinsh {} digit number;
+ 1. I'm looking for a ditinsh {numberLenght} digit number;
  2. If I, for some reason say "Fermi", "Pico" or "Bagels"; here what it means:
 
     a. "Fermi"  ---> One digit correct and in the right position;
@@ -17,11 +17,11 @@ Can you help me? I have some clues to help you:
     c. "Bagels" ---> No digits are correct.
 
 Thanks for your help! I really apreciate.
-'''.format(numberLenght))
+''')
     while True:
         number = getNumber()
         numGuess = 1
-        print("To be more of a challenge, you have a total of {} guesses to make".format(maxGuesses))
+        print(f"To be more of a challenge, you have a total of {maxGuesses} guesses to make")
         print()
         while numGuess <= maxGuesses:
             guess = ""
@@ -39,8 +39,8 @@ Thanks for your help! I really apreciate.
                 break
 
             if numGuess > maxGuesses:
-                print("You ran out of guesses. Beside this, don't worry, you can try again!")
-                print("The answer taht you ha looking for is {}".format(number))
+                print(f"You ran out of guesses. Beside this, don't worry, you can try again!")
+                print("The answer taht you ha looking for is {number}")
         print("Are you willing to help me again? (yes or no)" + "\n")
         if not input("> ").lower().startswith("y"):
             break

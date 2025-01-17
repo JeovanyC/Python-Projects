@@ -54,22 +54,22 @@ Now! Here it goes!
         print(i)
     print()
     
-    print('''
+    print(f'''
 In conclusion...
 
 We had a total of:
 
-{} FizzBuzz's  
-{}
+{fizzBuzzCounter} FizzBuzz's  
+{fizzBuzzList}
 
-{} Fizz's
-{}
+{fizzCounter} Fizz's
+{fizzList}
           
-{} Buzz's      
-{}
+{buzzCounter} Buzz's      
+{buzzList}
           
 Preaty interesting!
-'''.format(fizzBuzzCounter, fizzBuzzList, fizzCounter, fizzList, buzzCounter, buzzList))
+''')
 
     
 

@@ -79,9 +79,9 @@ Wanna now something? I'm not showing you anything!
 
 
     if w_in_w != "":
-        print('''
+        print(f'''
         
-{}
+{answer[0]}
 
 Now!
 Wait and see!
@@ -92,7 +92,7 @@ The world in words!
 
 HAHAHAHAHA! *cough *cough
 
-'''.format(answer[0]))
+''')
         for line in bit_map.splitlines():
             for i, bit in enumerate(line):
                 if bit == " ":
