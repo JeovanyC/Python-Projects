@@ -21,33 +21,40 @@ def main():
             try:
                 month, day, year = date.split(" ")
                 
+                month = month.capitalize()
                 if month in months:
                     month = months.index(month) + 1
+                
+                day = int(day.replace(",", ""))
+                month = int(month)
+                year = int(year)
 
-                day.replace(",", "")
+                if 1 <= day <= 31:
+                    print(f"{year:04}-{month:02}-{day:02}")
+                else:
+                    print("Invalid date: day out of range.")
 
-                print(f"{year.zfill(4)}-{month.zfill(2)}-{day.zfill(2)}")
-
-            except ValueError:
-                print("Invalid date.")
+            except (ValueError, IndexError):
+                print("Invalid date: incorrect format.")
 
         elif "/" in date:
             try:
                 month, day, year = date.split("/")
 
-                month =  int(month)
                 day = int(day)
+                month = int(month)
+                year = int(year)
 
                 if 1 <= month <= 12 and 1 <= day <= 31:
-                    print(f"{year.zfill(4)}-{month.zfill(2)}-{day.zfill(2)}")
+                    print(f"{year:04}-{month:02}-{day:02}")
                 else:
-                    print("Invalid date.")
+                    print("Invalid date: month or day out of range.")
                 
-            except ValueError:
-                print("Invalid date.")
+            except (ValueError, IndexError):
+                print("Invalid date: incorrect format.")
 
         else:
-            print("Invalid date.")
+            print("Invalid date: unsupported format.")
 
 
 if __name__ == "__main__":
